@@ -1,6 +1,5 @@
 package com.example.badfinalkotlin
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -10,24 +9,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.badfinalkotlin.R
 import com.example.badfinalkotlin.databinding.ActivityMainBinding
 
 
-class MainActivity<ActivityMainBinding> : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private val contactViewModel: ContactViewModel by viewModels {
         ContactViewModelFactory((application as ContactApplication).repository)
     }
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: MyAdapter
-    private lateinit var onIntentReceived: onIntentReceived
+    private lateinit var onIntentReceived: OnIntentReceived
     private val REQUEST_CODE = 101
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
         //binding root
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

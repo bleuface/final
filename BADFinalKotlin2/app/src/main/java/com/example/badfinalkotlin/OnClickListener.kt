@@ -1,4 +1,4 @@
 package com.example.badfinalkotlin
 
-interface onClickListener {
+interface OnClickListener {
 }

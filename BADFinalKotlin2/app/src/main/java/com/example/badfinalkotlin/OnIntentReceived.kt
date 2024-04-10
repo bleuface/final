@@ -2,6 +2,6 @@ package com.example.badfinalkotlin
 
 import android.content.Intent
 
-interface onIntentReceived {
+interface OnIntentReceived {
     fun onIntent(intent: Intent, resultCode: Int)
 }

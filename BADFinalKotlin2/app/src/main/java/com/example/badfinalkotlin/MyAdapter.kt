@@ -11,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.badfinalkotlin.R
 
-class MyAdapter(_onClickListener: OnClickListeners, contactViewModel: ContactViewModel): RecyclerView.Adapter<MyAdapter.ViewHolder>(), onIntentReceived{
+class MyAdapter(_onClickListener: OnClickListeners, contactViewModel: ContactViewModel): RecyclerView.Adapter<MyAdapter.ViewHolder>(), OnIntentReceived{
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view)
 
